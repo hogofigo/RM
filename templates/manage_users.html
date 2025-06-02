@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Manage Users</h2>
+<form method='post'>
+  <input name='username' placeholder='Username' required>
+  <input name='password' placeholder='Password'>
+  <button name='action' value='add'>Add</button>
+  <button name='action' value='delete'>Delete</button>
+</form>
+<ul>{% for user in users %}<li>{{ user }}</li>{% endfor %}</ul>
+{% endblock %}

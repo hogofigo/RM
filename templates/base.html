@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Yanbu Cement Risk App</title><link rel='stylesheet' href='/static/style.css'></head>
+<body>
+<img src='/static/logo.png' alt='Logo' style='height:50px'>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul>{% for msg in messages %}<li>{{ msg }}</li>{% endfor %}</ul>
+  {% endif %}
+{% endwith %}
+{% block content %}{% endblock %}
+</body>
+</html>

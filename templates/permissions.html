@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Permissions</h2>
+<p>Welcome, {{ user }}.</p>
+{% if is_admin %}
+  <p>You have admin access.</p>
+{% else %}
+  <p>You have limited access.</p>
+{% endif %}
+<a href="/dashboard">Back to Dashboard</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<a href='/add-risk'>Add Risk</a> | <a href='/export/pdf'>Export PDF</a> | <a href='/export/excel'>Export Excel</a> | <a href='/manage-users'>Users</a> | <a href='/logout'>Logout</a>
+<table><tr><th>Risk</th><th>Category</th><th>Department</th><th>Rating</th><th>Description</th></tr>
+{% for r in risks %}
+<tr><td>{{ r.risk }}</td><td>{{ r.category }}</td><td>{{ r.department }}</td><td>{{ r.rating }}</td><td>{{ r.description }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

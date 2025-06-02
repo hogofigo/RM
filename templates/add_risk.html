@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Risk</h2>
+<form method="post">
+  <input name="risk" placeholder="Risk" required>
+  <input name="category" placeholder="Category" required>
+  <input name="department" placeholder="Department" required>
+  <select name="rating">
+    <option>Very Low</option><option>Low</option><option>Medium</option><option>High</option><option>Very High</option>
+  </select>
+  <textarea name="description" placeholder="Description" required></textarea>
+  <button type="submit">Add Risk</button>
+</form>
+{% endblock %}
